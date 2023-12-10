@@ -12,7 +12,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
+/* body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
 header.header {
@@ -52,7 +62,83 @@ header.header .ukraine .ukr {
 }
 
 
-/* for mobile */
+/* Section starts */
+section.section {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+section.section .center-content {
+    background-image: linear-gradient(to right, #27455f, #3c6d74, #11462f);
+    width: 90%;
+    padding: 20px 25px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section .center-content h2 {
+    color: #fdfdfd;
+    font-size: 20px;
+}
+
+.section .center-content p {
+    color: #fdfdfd;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* vectors stars in section */
+section.section .blue-half {
+    position: absolute;
+    top: 17px;
+    left: 45px;
+    width: 30px;
+    height: 50px;
+}
+
+section.section .green-half {
+    position: absolute;
+    bottom: -20px;
+    left: 8px;
+    width: 40px;
+    height: 50px;
+}
+
+section.section .green-circule {
+    position: absolute;
+    top: 20px;
+    right: 8px;
+    width: 40px;
+    height: 50px;
+}
+
+section.section .red-half {
+    position: absolute;
+    bottom: -25px;
+    right: 40px;
+    width: 40px;
+    height: 50px;
+}
+
+section.section .red-circule {
+    position: absolute;
+    top: 33px;
+    right: 100px;
+    width: 20px;
+}
+section.section .yellow {
+    position: absolute;
+    bottom: 2px;
+    left: 100px;
+    width: 20px;
+}
+
+
+/* for laptop */
 @media(min-width:576px) and (max-width:820px) {
 
     header.header {
@@ -68,43 +154,141 @@ header.header .ukraine .ukr {
         width: 190px;
         height: 67px;
     }
+
     .fa-bars {
         font-size: 27px;
-    
     }
 
+    /* section starts */
+    section.section .center-content {
+        padding: 35px 40px;
+        gap: 18px;
+    }
+    .section .center-content h2 {
+        font-size: 27px;
+    }
+    .section .center-content p {
+        font-size: 18px;
+    }
+/* vectors stars in section */
+section.section .blue-half {
+    left: 80px;
+    width: 50px;
 }
-/* laptop and PC */
-@media(min-width:821px) {
 
+section.section .green-half {
+    left: 30px;
+    width: 60px;
+}
+
+section.section .green-circule {
+    top: 20px;
+    right: 19px;
+    width: 60px;
+}
+
+section.section .red-half {
+    right: 60px;
+    width: 60px;
+}
+
+section.section .red-circule {
+    top: 30px;
+    right: 200px;
+    width: 30px;
+}
+section.section .yellow {
+    left: 160px;
+    width: 30px;
+}
+
+
+}
+
+/* PC */
+@media(min-width:821px) {
     header.header {
         justify-content: space-between;
         padding: 0 30px;
     }
+
     .fa-bars {
         display: none;
     }
+
     header .nav-links {
         display: flex;
-        gap: 15px;
+        gap: 20px;
     }
+
     header .nav-links a {
         color: var(--dark);
         text-decoration: none;
-
     }
+
     header .nav-links a:nth-child(2) {
         color: var(--yasil);
     }
+
     header .nav-links a:last-child {
         color: var(--qara);
         font-weight: 700;
     }
+
     header.header .logo {
         width: 190px;
         height: 67px;
     }
+
     header.header .ukraine span {
         font-size: 17px;
     }
+
+    /* section starts */
+    section.section .center-content {
+        padding: 50px 55px;
+        gap: 18px;
+        margin-top: 70px;
+    }
+    .section .center-content h2 {
+        font-size: 35px;
+    }
+    .section .center-content p {
+        font-size: 20px;
+    }
+/* vectors stars in section */
+section.section .blue-half {
+    left: 110px;
+    width: 60px;
+    top: 45px;
+}
+
+section.section .green-half {
+    left: 50px;
+    width: 80px;
+}
+
+section.section .green-circule {
+    right: 35px;
+    width: 80px;
+    top: 50px;
+}
+
+section.section .red-half {
+    right: 310px;
+    width: 90px;
+}
+
+section.section .red-circule {
+    top: 56px;
+    right: 280px;
+    width: 33px;
+}
+section.section .yellow {
+    left: 280px;
+    width: 30px;
+    bottom: 10px;
+}
+
+
 }
