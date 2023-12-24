@@ -215,38 +215,179 @@ section.section .yellow {
 
 article.article {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(397px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(397px, 1fr));
     gap: 8px;
     justify-content: center;
     padding-top: 30px;
 }
+
 article.article .info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px ;
+    padding: 15px;
 }
-.article .info img{
+
+.article .info img {
     width: 315px;
     box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.3);
-    
+
 }
+
 .article .prag {
-    padding-left: 30px;
+    padding-left: 3px;
+    width: 315px;
 }
 
 .article .info .prag h4 {
     font-size: 18px;
     font-weight: 600;
 }
+
 .article .info .prag p {
     font-size: 16px;
-    font-weight: 400;  
+    font-weight: 400;
+    width: 95%;
+
 }
+
 .article .info small {
     font-size: 14px;
     font-weight: 500;
 }
+
+.load {
+    display: none;
+}
+
+/* form starts */
+.ready {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0px;
+}
+
+.ready h1 {
+    color: var(--qara);
+    font-size: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.ready form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #1C2B32;
+    width: 40%;
+    min-width: 310px;
+    padding: 36px 30px 40px 30px;
+    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ready form .form-heading h4 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.ready form .form-heading small {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+}
+
+.label input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    padding: 5px 4px;
+}
+
+.label label {
+    color: #9595ab;
+}
+
+form button {
+    background-color: #4EBA85;
+    color: #fff;
+    padding: 10px 23px;
+    border: 0;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+/* footer starts */
+
+footer.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: space-between; */
+    gap: 20px;
+    background-color: var(--qara);
+    padding: 40px 26px;
+}
+
+.footer .left img {
+    width: 100px;
+}
+.footer .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* align-items: flex-start; */
+    gap: 20px;
+}
+.footer  h5 {
+    color: #fff;
+    font-size: 23px;
+}
+.footer .up, .down {
+    text-align: justify;
+}
+.footer p {
+    color: #9595ab;
+    font-size: 15px;
+}
+.footer small {
+    color: #fff;
+    font-size: 13px;
+}
+.footer .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-self: center; */
+    gap: 30px;
+}
+.footer .right .images {
+    display: flex;
+    gap: 10px;
+}
+
+.footer .right .images img {
+    width: 18px;
+}
+
+
+
+
+
 
 
 @media(min-width:360px) and (max-width:429px) {
@@ -264,13 +405,27 @@ article.article .info {
         width: 100%;
         height: 100%;
     }
+
+    .article .info img {
+        width: 340px;
+    }
+
     article.article {
         grid-template-columns: 1fr;
     }
+
     .article .prag {
-        padding-left: 25px;
+        padding-left: 2px;
+        width: 340px;
+    }
+/* ready st */
+    .ready form {
+        min-width: 360px;
     }
 
+    .ready h1 {
+        font-size: 22px;
+    }
 }
 
 /* for laptop */
@@ -382,28 +537,65 @@ article.article .info {
     .content .material-side .text span p {
         font-size: 20px;
     }
-/* article starts */
+
+    /* article starts */
     article.article {
-        grid-template-columns: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
     }
-    .article .info img{
+
+    .article .info img {
         width: 340px;
     }
+
     .article .prag {
-        padding-left: 15px;
+        width: 340px;
+        /* padding-left: 15px; */
     }
 
     .article .info .prag h4 {
         font-size: 26px;
-            
+
     }
+
     .article .info .prag p {
         font-size: 21px;
         font-weight: 500;
-    
+        width: 100%;
+
     }
+
     .article .info small {
         font-size: 20px;
+    }
+
+    /* ready st */
+    .ready form {
+        min-width: 500px;
+        padding: 46px 40px 50px 40px;
+    }
+
+    .ready h1 {
+        font-size: 30px;
+    }
+
+    .ready form .form-heading h4 {
+        font-size: 26px;
+    }
+
+    .ready form .form-heading small {
+        font-size: 18px;
+    }
+
+    .label label {
+        font-size: 20px;
+    }
+.label {
+    gap: 22px;
+}
+    form button {
+        padding: 13px 30px;
+        font-size: 20px;
+
     }
 }
 
@@ -413,31 +605,39 @@ article.article .info {
         justify-content: space-between;
         padding: 0 30px;
     }
+
     .fa-bars {
         display: none;
     }
+
     header .nav-links {
         display: flex;
         gap: 20px;
     }
+
     header .nav-links a {
         color: var(--dark);
         text-decoration: none;
     }
+
     header .nav-links a:nth-child(2) {
         color: var(--yasil);
     }
+
     header .nav-links a:last-child {
         color: var(--qara);
         font-weight: 700;
     }
+
     header.header .logo {
         width: 190px;
         height: 67px;
     }
+
     header.header .ukraine span {
         font-size: 17px;
     }
+
     /* section starts */
     section.section .center-content {
         padding: 50px 55px;
@@ -445,6 +645,7 @@ article.article .info {
         margin-top: 70px;
 
     }
+
     .section .center-content h2 {
         font-size: 35px;
     }
@@ -526,12 +727,10 @@ article.article .info {
 
     .content .material-side .text {
         width: 606px;
-
     }
 
     .content .material-side .text h2 {
         font-size: 32px;
-
     }
 
     .content .material-side .text p {
@@ -543,14 +742,73 @@ article.article .info {
         width: 40px;
         height: 42px;
     }
+
     .content .material-side .text span p {
         font-size: 15px;
     }
-/* article starts */
-    .article .info img{
+
+    /* article starts */
+    .article .info img {
         width: 397px;
     }
+
     .article .prag {
-        padding-left: 33px;
+        padding-left: 2px;
+        width: 397px;
     }
+
+    .load {
+        display: inline-block;
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .load span,
+    fa-spinner {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    /* ready st */
+    .ready form {
+        min-width: 550px;
+        padding: 56px 64px 50px 64px;
+    }
+
+    .ready h1 {
+        font-size: 40px;
+    }
+
+    .ready form .form-heading h4 {
+        font-size: 24px;
+    }
+
+    .ready form .form-heading small {
+        font-size: 14px;
+    }
+
+    .label label {
+        font-size: 16px;
+    }
+.label {
+    gap: 25px;
+}
+    form button {
+        padding: 10px 30px;
+    }
+/* footer */
+
+footer.footer {
+    justify-content: space-between;
+}
+
+.footer .center {
+    align-items: flex-start;
+}
+
+.footer .right {
+    align-items: flex-start;
+}
+
+
 }
