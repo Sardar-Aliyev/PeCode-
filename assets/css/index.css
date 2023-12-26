@@ -49,8 +49,19 @@ header.header .ukraine span {
 header.header .ukraine {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    transition: all 2s cubic-bezier(1,.45,.28,.92) ;
+    animation-name: flag;
+    animation-duration: 5s;
+}
+.header .ukraine:hover {
+    background: yellow;
 }
 
+@keyframes flag{
+from { background-color: var(--goy-reng);}
+to {background-color: yellow;}
+}
 header.header .ukraine .ukr {
     color: var(--goy-reng);
 }
@@ -331,6 +342,10 @@ form button {
     margin-top: 15px;
     cursor: pointer;
 }
+
+form button:hover {
+    box-shadow: 5px 8px 15px rgba(0, 0, 0, 1.9);
+}
 /* footer starts */
 
 footer.footer {
@@ -595,9 +610,37 @@ footer.footer {
     form button {
         padding: 13px 30px;
         font-size: 20px;
-
     }
+
+    
+footer.footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 15px;
+    position: relative;
 }
+
+.footer .left  {
+    justify-content: center;
+}
+.footer .center {
+    align-self: flex-start;
+}
+.footer p {
+    font-size: 18px;
+}
+.footer small {
+    font-size: 19px;
+}
+.footer .right {
+    position: absolute;
+    right: 20px;
+    top: 130px;
+}
+.footer .right .images img {
+    width: 21px;
+}}
 
 /* PC */
 @media(min-width:821px) {
